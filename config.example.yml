@@ -1,0 +1,43 @@
+# 复制为 config.yml。实际配置已在安装时生成，通常直接编辑 config.yml 即可。
+# 邮箱和 API 凭据只填在本机，不要发到聊天中。
+mail:
+  address: ""                    # 例如 your_name@163.com
+  authorization_code: ""         # 163 的 IMAP/SMTP 客户端授权码
+  imap_host: imap.163.com
+  imap_port: 993
+  smtp_host: smtp.163.com
+  smtp_port: 465
+  folders: ["*"]                 # 同步所有可选文件夹，含已读；也可改为 ["INBOX"]
+
+deepseek:
+  api_key: ""                    # DeepSeek 官方 API Key
+  base_url: https://api.deepseek.com
+  model: deepseek-flash
+
+control:
+  allowed_senders: []             # 改为 ["你用来发控制邮件的邮箱@example.com"]
+  mode: natural_language           # 白名单控制者直接用普通文字发邮件，不需要正文口令或固定主题
+  actions: [inquire, query, answer, update_data] # 请购、查询、问答及按编号更新已有记录
+  update_tables: [suppliers, material_groups, supplier_groups, statuses, requisitions, quotations, orders]
+  update_max_rows: 1000            # 单封邮件最多更新的行数；不自动新增或删除记录
+  query_limit: 50                  # 每类查询最多展示50条，超过时标明结果范围
+  answer_chars: 12000              # 模型回答正文的最大字符数
+  subject_prefix: "[AGENT]"         # structured兼容模式才要求此前缀
+  # structured兼容模式才使用token；自然语言模式不在邮件正文传口令。
+
+procurement:
+  enabled: true                    # 启用自动询价及供应商报价入库，需先初始化采购数据库
+  max_sends_per_cycle: 10           # 每轮最多发出的供应商询价邮件数量
+
+service:
+  poll_seconds: 60
+  max_mail_per_folder: 100        # 每轮每文件夹最多拉取 100 封，逐轮同步全部历史
+  max_ai_per_cycle: 5             # 每轮最多处理 5 封，优先控制邮件和最新来信
+  max_body_chars: 16000           # 仅限制交给 AI 的正文，本地归档完整保留
+
+delivery:
+  dry_run: false                 # false：条件满足即自动发信；true：只保存预览 JSON
+
+storage:
+  directory: data                 # 此安装保持 data，便于启动/停止脚本管理
+  keep_originals: false           # 新邮件仅保留正文、表格提取内容和元数据 JSON，不存原始 MIME/附件

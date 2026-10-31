@@ -1,0 +1,15 @@
+{
+  "requisitions_imported_in_temporary_db": 90,
+  "candidate_pairs": 496,
+  "matched_requisitions": 90,
+  "supplier_inquiries": 94,
+  "duplicate_batch_noop": true,
+  "smtp_calls": 0,
+  "offline_quotation_rows": 5,
+  "quote_state": "imported",
+  "integrity": [
+    "ok"
+  ],
+  "foreign_key_errors": [],
+  "source_files_unchanged": true
+}

@@ -1,0 +1,12 @@
+主题：[AGENT] 创建发票提醒任务
+正文请使用纯文本；替换下面的口令和实际收件邮箱。
+
+token: "复制 config.yml 中 control.token 的完整值"
+action: create
+task:
+  id: invoice_alert
+  name: 发票材料提醒
+  condition: 来信涉及发票且要求补充材料
+  recipients:
+    - target@example.com
+  instruction: 用中文说明原始发件人、所需材料和明确给出的截止日期；未给出的信息写待确认

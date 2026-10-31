@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>邮迹 · 邮件工作台</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+      <symbol id="i-inbox" viewBox="0 0 24 24"><path d="m4 5-2 9v5h20v-5l-2-9Z"/><path d="M2 14h6l2 3h4l2-3h6"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></symbol>
+      <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="m8 9 1 1 2-2m3 1h2m-8 6 1 1 2-2m3 1h2"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m21 3-7 18-4-7-7-4Z"/><path d="m10 14 6-6"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+      <symbol id="i-clip" viewBox="0 0 24 24"><path d="m9 13 6-6a3 3 0 0 1 4 4l-8 8a5 5 0 0 1-7-7l8-8"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 8V5h7l2 3h9v12H3Z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="m14 5-7 7 7 7"/></symbol>
+    </defs>
+  </svg>
+  <a class="skip" href="#main">跳到邮件内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="邮迹首页"><span class="brand-mark"><svg class="icon"><use href="#i-mail"/></svg></span><span>邮迹<small>MAIL AGENT</small></span><span class="local-tag">LOCAL</span></a>
+    <div class="workspace-label">工作空间</div>
+    <nav class="primary-nav" aria-label="工作台导航">
+      <button class="nav-item active" data-view="mail" aria-current="page"><svg class="icon"><use href="#i-inbox"/></svg><span>邮件归档</span><span id="nav-mail-count" class="nav-count">—</span></button>
+      <button class="nav-item" data-view="tasks"><svg class="icon"><use href="#i-task"/></svg><span>自动化任务</span><span id="nav-task-count" class="nav-count">—</span></button>
+      <button class="nav-item" data-view="outbox"><svg class="icon"><use href="#i-send"/></svg><span>发件记录</span><span id="nav-outbox-count" class="nav-count">—</span></button>
+    </nav>
+    <div id="folder-section" class="folder-section"><div class="workspace-label">邮箱文件夹</div><nav id="folder-nav" aria-label="文件夹"></nav></div>
+    <div class="sidebar-bottom"><div class="local-note"><span class="local-dot"></span>本地存储 · JSON 归档</div><p>让邮件成为行动的起点。</p><div class="account-card"><span class="account-avatar">@</span><div><strong>当前邮箱</strong><select id="account-select" aria-label="切换归档邮箱"><option value="">正在连接…</option></select></div></div></div>
+  </aside>
+  <main id="main" class="main">
+    <header class="topbar"><div class="breadcrumb">个人空间 <span>/</span> <strong>邮件工作台</strong></div><div class="topbar-right"><span id="service-pill" class="service-pill"><i></i><span>连接中</span></span><span class="topbar-divider"></span><span class="profile">M</span></div></header>
+    <section class="workspace">
+      <div class="page-heading"><div><div class="eyebrow">YOUR MAIL, IN FOCUS</div><h1 id="page-title">邮件归档</h1><p id="page-description">所有来信，清晰有序。让 AI 帮你抓住重点。</p></div><div class="page-actions"><span id="updated-at" class="update-label">每 15 秒自动更新</span><button id="refresh" class="button"><svg class="icon"><use href="#i-refresh"/></svg><span>刷新</span></button></div></div>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <section class="stats" aria-label="邮箱概览">
+        <article class="stat"><div><span>已归档邮件</span><strong id="stat-all">—</strong><small>全部文件夹</small></div><span class="stat-icon mint"><svg class="icon"><use href="#i-inbox"/></svg></span></article>
+        <article class="stat"><div><span>外部来信</span><strong id="stat-incoming">—</strong><small>其他邮箱发来的消息</small></div><span class="stat-icon blue"><svg class="icon"><use href="#i-mail"/></svg></span></article>
+        <article class="stat"><div><span>AI 已解析</span><strong id="stat-analyzed">—</strong><small>摘要已就绪</small></div><span class="stat-icon violet"><svg class="icon"><use href="#i-spark"/></svg></span></article>
+        <article class="stat"><div><span>任务命中</span><strong id="stat-matched">—</strong><small>符合规则的邮件数</small></div><span class="stat-icon sand"><svg class="icon"><use href="#i-task"/></svg></span></article>
+      </section>
+      <section id="mail-workbench" class="mail-workbench" aria-label="邮件查看器">
+        <div class="mail-list-panel"><div class="list-toolbar"><div class="list-title"><h2 id="list-title">全部邮件</h2><span id="list-total">0 封</span></div><label class="search-box"><svg class="icon"><use href="#i-search"/></svg><input id="search" type="search" placeholder="搜索发件人、正文或摘要" maxlength="256" aria-label="搜索邮件"><kbd>/</kbd></label><div class="filter-row"><label class="sr-only" for="kind-filter">邮件类型</label><select id="kind-filter"><option value="all">全部类型</option><option value="incoming">外部来信</option><option value="control">控制邮件</option><option value="agent">Agent 邮件</option><option value="outgoing">自己发送</option></select><span>按收信时间排序</span></div></div><div id="mail-list" class="mail-list" aria-live="polite"><div class="empty"><span class="empty-icon">…</span><h3>正在加载邮件</h3><p>从本地归档中读取。</p></div></div><div class="pagination"><span id="page-label">第 1 / 1 页</span><div><button id="prev-page" class="icon-button" aria-label="上一页" disabled><svg class="icon"><use href="#i-back"/></svg></button><button id="next-page" class="icon-button" aria-label="下一页" disabled><svg class="icon"><use href="#i-arrow"/></svg></button></div></div></div>
+        <article id="mail-detail" class="mail-detail" aria-label="邮件详情" aria-live="polite"></article>
+      </section>
+      <section id="tasks-view" class="secondary-view" hidden><div class="section-heading"><div><h2>由邮件驱动的自动化</h2><p>只有白名单邮箱通过口令验证后，才能创建或修改任务。</p></div><button id="task-help-toggle" class="button" aria-expanded="false" aria-controls="task-help"><svg class="icon"><use href="#i-info"/></svg>如何设置任务</button></div><div id="task-help" class="help-card" hidden><h3>给 Agent 发一封控制邮件</h3><p>从白名单邮箱发到你的 163 邮箱，主题以 [AGENT] 开头。正文使用下方格式，把口令、条件和收件人替换为实际值。</p><pre>token: "config.yml 中的 control.token"
+action: create
+task:
+  id: invoice_alert
+  name: 发票提醒
+  condition: 来信要求补充发票材料
+  recipients: ["target@example.com"]
+  instruction: 用中文概括所需材料和截止日期</pre><p>本页面用于查看。暂停、恢复和修改任务也通过控制邮件完成。</p></div><div id="task-list" class="task-grid"></div></section>
+      <section id="outbox-view" class="secondary-view" hidden><div class="section-heading"><div><h2>每一次发送，都有记录</h2><p>查看任务通知、控制回执，以及 SMTP 的处理结果。</p></div><span id="outbox-total" class="subtle"></span></div><div id="outbox-list" class="outbox-list"></div></section>
+      <footer class="workspace-footer"><span><span class="tiny-dot"></span>仅在本机提供访问</span><span>邮件正文以纯文本展示 · 不加载外部内容</span></footer>
+    </section>
+  </main>
+</body>
+</html>
