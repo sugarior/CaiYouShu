@@ -6,6 +6,7 @@ import unittest
 import test_procurement_mail as fixtures
 from mailagent.engine import Engine
 from mailagent.natural_control import execute_queries
+from mailagent.table_updates import bulk_supplier_email_plan
 from procurementdb import Database,DataError
 from procurementdb.tables import parse_table
 from procurementdb.templates import csv_data
@@ -76,6 +77,23 @@ class TableUpdateTests(unittest.TestCase):
         self.assertEqual(self.emails(),before)
         with Database(self.fixture.path,readonly=True) as db:
             self.assertEqual(db.connection.execute('SELECT COUNT(*) FROM data_update_requests').fetchone()[0],0)
+
+    def test_plain_email_can_bulk_change_only_all_supplier_email(self):
+        request='请把全部供应商邮箱统一改为 xyinchina@163.com'
+        plan=bulk_supplier_email_plan(request)
+        self.assertEqual(plan,{'action':'update_data','resource':'suppliers',
+                               'bulk_change':{'scope':'all','field':'email','value':'xyinchina@163.com'}})
+        item=self.send(text=request)
+        self.assertTrue(item['control_result']['ok'])
+        self.assertEqual(self.emails(),{'S1':'xyinchina@163.com','S2':'xyinchina@163.com'})
+        self.ai.route_control.assert_not_called()
+        with Database(self.fixture.path,readonly=True) as db:
+            self.assertEqual(db.connection.execute('SELECT COUNT(*) FROM data_update_requests').fetchone()[0],1)
+
+    def test_bulk_update_requires_explicit_scope_and_value(self):
+        self.assertIsNone(bulk_supplier_email_plan('如何把全部供应商邮箱改为 demo@example.com？'))
+        self.assertIsNone(bulk_supplier_email_plan('请把供应商 S1 邮箱改为 demo@example.com'))
+        self.assertIsNone(bulk_supplier_email_plan('请把所有供应商邮箱改为 demo@example.com 或 other@example.com'))
 
     def test_unknown_id_rolls_back_and_does_not_insert(self):
         before=self.emails()

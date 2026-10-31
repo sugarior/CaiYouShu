@@ -3,6 +3,7 @@
 config.yml
 .venv/
 data/
+demo-data/
 __pycache__/
 *.pyc
 *.sqlite

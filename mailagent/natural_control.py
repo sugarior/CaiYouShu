@@ -270,7 +270,10 @@ class NaturalControl:
                      'conversation':self.history(item,sender)}
             plan=item.get('control_plan')
             if plan is None:
-                plan=self.ai.route_control(request,context)
+                from .table_updates import bulk_supplier_email_plan
+                plan=bulk_supplier_email_plan(actionable)
+                if plan is None:
+                    plan=self.ai.route_control(request,context)
                 if not isinstance(plan,dict):
                     raise DataError('模型没有返回可识别的控制动作')
                 item['control_plan']=plan

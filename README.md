@@ -4,6 +4,33 @@
 
 另已接入采购SQLite数据库和自然语言控制：控制邮箱直接写“请按附件请购单发起询价”，自动匹配供应商并按统一模板逐家发信；也可直接询问报价、请购单和询价进度，或通过邮件向模型提问。供应商回复填好的附件后自动校验报价入库。使用步骤见 [templates/使用说明.md](templates/使用说明.md)，数据库结构见 [DATABASE.md](DATABASE.md)。
 
+## 本地三账号演示
+
+运行 `.venv` 中的 Python：
+
+```powershell
+$AgentPython = if (Test-Path .\.venv\Scripts\python.exe) { '.\.venv\Scripts\python.exe' } else { '.\.venv\bin\python.exe' }
+& $AgentPython multiuser.py
+```
+
+浏览器打开 `http://127.0.0.1:8788`。首次启动输入一次平台共用的 DeepSeek API Key；之后最多可注册 3 个账号。每个账号分别设置登录邮箱/密码、真实 Agent 邮箱及客户端授权码、1 到 3 个控制邮箱。注册和修改邮箱时会实际验证 IMAP 与 SMTP 登录。
+
+新账号自动获得独立的 Agent 进程、邮件归档和采购 SQLite，并注入 3 家演示供应商、4 个物料组、8 条演示请购单。供应商邮箱默认使用 `xyinchina@163.com`，注册或邮箱设置页可更改；也可从控制邮箱发送“请把全部供应商邮箱统一改为 name@example.com”，该动作只批量修改本账号现有供应商的邮箱并写入审计记录。新演示运行数据保存在被 Git 忽略的 `demo-data/`。若原有 `config.yml` 存在，平台保留原文件，并将原邮箱、授权码、控制邮箱和 DeepSeek 模型设置复制到一个待认领账号；旧 `data/` 的邮件、表格和采购历史不会导入新租户库。
+
+平台进程只监听本机回环地址。服务器部署时使用 `deploy/` 中的 Nginx 配置，通过 HTTPS 代理开放公网访问；不要把 8788 端口直接暴露到公网。关闭平台进程时会停止它管理的演示 Agent。
+
+### Ubuntu 公网 HTTPS
+
+服务单元为 `deploy/caiyoushu-platform.service`，假设项目位于 `/home/ubuntu/CaiYouShu`。公网 IP 部署使用支持 IP 证书的 Certbot 5.4+ 和短期证书，安全组只需开放 TCP 80/443；证书需要由 Certbot 定时续期。
+
+先安装 Nginx 与 Certbot，将 `deploy/nginx-caiyoushu-bootstrap.conf` 放入 `/etc/nginx/sites-available/caiyoushu` 并启用，创建 `/var/www/caiyoushu-acme`，确认 Nginx 启动后申请证书：
+
+```sh
+sudo certbot certonly --webroot -w /var/www/caiyoushu-acme --ip-address 81.69.224.197 --preferred-profile shortlived --non-interactive --agree-tos --register-unsafely-without-email
+```
+
+随后用 `deploy/nginx-caiyoushu.conf` 替换 bootstrap 配置，并安装 `deploy/certbot-reload-nginx.sh` 至 `/etc/letsencrypt/renewal-hooks/deploy/` 且设置可执行。启用 `caiyoushu-platform.service` 并停用旧的 `caiyoushu-agent.service`。`config.yml`、`data/` 和 `demo-data/` 不纳入发布包。
+
 ## 填写配置
 
 编辑本机 `config.yml` 的四项：

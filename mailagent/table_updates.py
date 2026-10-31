@@ -8,6 +8,7 @@ from procurementdb import Database,DataError
 from procurementdb.tables import FIELDS
 from procurementdb.updates import UPDATE_TABLES,attachment_changes,apply_updates,render_update
 from .procurement import attachment_csv
+from .config import address
 
 
 FIELD_WORDS = {
@@ -33,6 +34,29 @@ def explicit_update(request):
     if re.search(r'(只|仅)(想|需要|要)?\s*(查询|查看|检查|预览|分析|解释)',request):
         return False
     return bool(re.search(r'更新|修改|更正|改为|改成|调整|替换|修正|清空|变更',request))
+
+
+def bulk_supplier_email_plan(request):
+    """Parse a narrowly-scoped, explicit all-supplier mailbox change."""
+    if not explicit_update(request):
+        return None
+    if not re.search(r'(?:全部|所有|全体|每个|每家|统一)',request) or not re.search(r'供应商|供货商',request):
+        return None
+    if not re.search(r'邮箱|收件地址|邮件地址|电子邮件|email',request,re.I):
+        return None
+    if not re.search(r'请|帮我|麻烦|把|将|统一',request):
+        return None
+    if re.search(r'如何|怎么|能否|是否|可不可以|要不要|为什么',request):
+        return None
+    matches=re.findall(r"(?<![A-Za-z0-9.!#$%&'*+/=?^_`{|}~-])[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?(?![A-Za-z0-9.!#$%&'*+/=?^_`{|}~-])",request)
+    if len(matches)!=1:
+        return None
+    try:
+        value=address(matches[0])
+    except ValueError:
+        return None
+    return {'action':'update_data','resource':'suppliers',
+            'bulk_change':{'scope':'all','field':'email','value':value}}
 
 
 def _mentioned_field(table,field,request):
@@ -72,7 +96,21 @@ def update_from_mail(config,store,item,sender,plan,request):
         raise DataError('该表未在config.yml的control.update_tables中启用更新')
     common={'action','resource'}
     filename=None
-    if 'changes' in plan:
+    if 'bulk_change' in plan:
+        if set(plan)!=common|{'bulk_change'} or table!='suppliers' or not isinstance(plan['bulk_change'],dict):
+            raise DataError('整表修改仅支持供应商邮箱')
+        bulk=plan['bulk_change']
+        if set(bulk)!={'scope','field','value'} or bulk['scope']!='all' or bulk['field']!='email':
+            raise DataError('整表修改仅支持明确要求的全部供应商邮箱')
+        value=bulk['value']
+        if not _mentioned_field(table,'email',request) or not _literal(value,request):
+            raise DataError('新邮箱必须由当前控制邮件明确给出')
+        with Database(config.storage/'procurement.sqlite3',readonly=True) as db:
+            identifiers=[row[0] for row in db.connection.execute('SELECT id FROM suppliers ORDER BY id')]
+        if not identifiers:
+            raise DataError('供应商表没有可更新记录')
+        changes=[{'key':{'id':identity},'values':{'email':value}} for identity in identifiers]
+    elif 'changes' in plan:
         if set(plan)-common-{'changes'}:
             raise DataError('正文更新不能混用附件或其他执行参数')
         changes=plan['changes']
