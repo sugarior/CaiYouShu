@@ -131,6 +131,20 @@ class ProcurementTests(unittest.TestCase):
         with self.assertRaises(sqlite3.IntegrityError):
             self.db.connection.execute("INSERT INTO supplier_groups VALUES ('missing','G1','{}')")
 
+    def test_missing_requisition_group_reports_exact_key_and_rolls_back(self):
+        missing = self.req('R2')
+        missing[2] = 'MG013'
+        with self.assertRaisesRegex(DataError, r'R2.*物料分组编号不存在：MG013'):
+            self.ingest([self.req(), missing])
+        self.assertEqual(self.db.summary()['requisitions'], 0)
+        self.assertEqual(self.db.summary()['import_files'], 0)
+
+    def test_missing_requisition_status_reports_exact_key(self):
+        missing = self.req()
+        missing[1] = 999
+        with self.assertRaisesRegex(DataError, r'R1.*状态编号不存在：999'):
+            self.ingest([missing])
+
     def test_candidates_and_per_supplier_grouping(self):
         result = self.prepare()
         self.assertEqual(len(self.db.candidates()), 3)

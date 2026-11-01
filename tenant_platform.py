@@ -20,7 +20,7 @@ import uuid
 
 import yaml
 
-from demo_seed import initialize_demo_database
+from demo_seed import initialize_demo_database, migrate_demo_database
 from mailagent.config import Config, ConfigError, ROOT, address
 from mailagent.mailio import close_smtp, imap_connection, smtp_connection
 from mailagent.store import Store, now, read_json
@@ -53,6 +53,7 @@ class TenantPlatform:
         self.settings = self._load_settings()
         self._initialize()
         self._bootstrap_original_account()
+        self._upgrade_demo_databases()
         self.supervisor = None
         if start_supervisor:
             self.supervisor = threading.Thread(target=self._supervise, daemon=True, name="tenant-agent-supervisor")
@@ -237,6 +238,15 @@ class TenantPlatform:
     def account_count(self):
         with closing(self._connect()) as con:
             return con.execute("SELECT COUNT(*) FROM users").fetchone()[0]
+
+    def _upgrade_demo_databases(self):
+        # Runs before supervision starts, so no managed Agent can send mail
+        # while its old synthetic seed is being migrated.
+        with closing(self._connect()) as con:
+            users = con.execute("SELECT id,agent_email,supplier_email FROM users").fetchall()
+        for user in users:
+            migrate_demo_database(self.tenants / user["id"] / "data" / "procurement.sqlite3",
+                                  user["supplier_email"], user["agent_email"])
 
     def _bootstrap_original_account(self):
         if self.account_count() or not self.legacy_config.is_file() or not self.settings.get("api_key"):

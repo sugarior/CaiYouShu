@@ -42,9 +42,10 @@ class TenantPlatformTests(unittest.TestCase):
         for user in (first, second):
             db_path = self.platform.data_root(user['id']) / 'procurement.sqlite3'
             with Database(db_path, readonly=True) as db:
-                self.assertEqual(db.summary()['suppliers'], 3)
-                self.assertEqual(db.summary()['material_groups'], 4)
-                self.assertEqual(db.summary()['requisitions'], 8)
+                self.assertEqual(db.summary()['suppliers'], 100)
+                self.assertEqual(db.summary()['material_groups'], 32)
+                self.assertEqual(db.summary()['supplier_groups'], 133)
+                self.assertEqual(db.summary()['requisitions'], 180)
                 self.assertEqual(db.summary()['inquiry_outbox'], 0)
                 emails = {row[0] for row in db.connection.execute('SELECT DISTINCT email FROM suppliers')}
                 self.assertEqual(emails, {'xyinchina@163.com'})
@@ -112,7 +113,7 @@ class TenantPlatformTests(unittest.TestCase):
         self.assertEqual(probed, ['original-agent@example.com'])
         self.assertEqual(platform.authenticate('original-agent@example.com', 'new-local-demo-password')['id'], claimed['id'])
         with Database(platform.data_root(claimed['id']) / 'procurement.sqlite3', readonly=True) as db:
-            self.assertEqual(db.summary()['requisitions'], 8)
+            self.assertEqual(db.summary()['requisitions'], 180)
             self.assertEqual(db.summary()['inquiries'], 0)
             self.assertEqual(db.summary()['quotations'], 0)
 

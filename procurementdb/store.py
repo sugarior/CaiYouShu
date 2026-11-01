@@ -85,9 +85,13 @@ class Database:
                 if table == 'quotations' and extra and any(previous[k] != v for k, v in extra.items()):
                     raise DataError('报价编号已由其他邮件使用')
                 continue
-            if table == 'requisitions' and record['group_name']:
+            if table == 'requisitions':
+                if not self.connection.execute('SELECT 1 FROM statuses WHERE id=?', (record['status_id'],)).fetchone():
+                    raise DataError(f'请购单 {record["id"]} 的状态编号不存在：{record["status_id"]}')
                 group = self.connection.execute('SELECT name FROM material_groups WHERE id=?', (record['group_id'],)).fetchone()
-                if group and group['name'] != record['group_name']:
+                if not group:
+                    raise DataError(f'请购单 {record["id"]} 的物料分组编号不存在：{record["group_id"]}；请先维护该物料分组及对应供应商')
+                if record['group_name'] and group['name'] != record['group_name']:
                     raise DataError('物料分组编号与名称不一致：' + record['id'])
             if table == 'quotations':
                 record['created_at'] = now()

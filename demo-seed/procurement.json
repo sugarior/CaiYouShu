@@ -1,0 +1,4189 @@
+{
+  "format": 1,
+  "source": "data/procurement.sqlite3",
+  "original_business_sha256": "f2be3868b0485945ad29ee9e18788d8ff334b28a20841a1c0e12baa2bc45006f",
+  "reset_waiting_requisitions": 90,
+  "sha256": "db450ccf43ffc391df78421e27bcfe60675e7d3d41bf73ddc6ac1dd6804eb6a1",
+  "tables": {
+    "material_groups": [
+      {
+        "id": "MG001",
+        "name": "PLC及模块"
+      },
+      {
+        "id": "MG002",
+        "name": "板类"
+      },
+      {
+        "id": "MG003",
+        "name": "钣金件"
+      },
+      {
+        "id": "MG004",
+        "name": "磁铁·磁性产品"
+      },
+      {
+        "id": "MG005",
+        "name": "导轨/滑轨"
+      },
+      {
+        "id": "MG006",
+        "name": "电机"
+      },
+      {
+        "id": "MG007",
+        "name": "电机控制类"
+      },
+      {
+        "id": "MG008",
+        "name": "端子"
+      },
+      {
+        "id": "MG009",
+        "name": "急停/按钮类/保护罩"
+      },
+      {
+        "id": "MG010",
+        "name": "密封圈"
+      },
+      {
+        "id": "MG011",
+        "name": "模组"
+      },
+      {
+        "id": "MG012",
+        "name": "塑胶件"
+      },
+      {
+        "id": "MG013",
+        "name": "温度传感器类"
+      },
+      {
+        "id": "MG014",
+        "name": "型材"
+      },
+      {
+        "id": "MG015",
+        "name": "直流电源"
+      },
+      {
+        "id": "MG016",
+        "name": "轴承类"
+      },
+      {
+        "id": "MG017",
+        "name": "轴类"
+      },
+      {
+        "id": "MG018",
+        "name": "传动轮"
+      },
+      {
+        "id": "MG019",
+        "name": "气源处理类"
+      },
+      {
+        "id": "MG020",
+        "name": "工业网络设备"
+      },
+      {
+        "id": "MG021",
+        "name": "工业网卡"
+      },
+      {
+        "id": "MG022",
+        "name": "型材用配件"
+      },
+      {
+        "id": "MG023",
+        "name": "通讯模块"
+      },
+      {
+        "id": "MG024",
+        "name": "线缆"
+      },
+      {
+        "id": "MG025",
+        "name": "滤波器"
+      },
+      {
+        "id": "MG026",
+        "name": "联轴器"
+      },
+      {
+        "id": "MG027",
+        "name": "减速器"
+      },
+      {
+        "id": "MG028",
+        "name": "自研模组"
+      },
+      {
+        "id": "MG029",
+        "name": "门配件"
+      },
+      {
+        "id": "MG030",
+        "name": "机器人"
+      },
+      {
+        "id": "MG031",
+        "name": "机架类零件"
+      },
+      {
+        "id": "MG032",
+        "name": "电池"
+      }
+    ],
+    "suppliers": [
+      {
+        "id": "SUP0001",
+        "company": "深圳市汇川技术股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "张先生"
+      },
+      {
+        "id": "SUP0002",
+        "company": "无锡信捷电气股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "王女士"
+      },
+      {
+        "id": "SUP0003",
+        "company": "浙江禾川科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "李先生"
+      },
+      {
+        "id": "SUP0004",
+        "company": "深圳市雷赛智能控制股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "赵女士"
+      },
+      {
+        "id": "SUP0005",
+        "company": "深圳麦格米特电气股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "陈先生"
+      },
+      {
+        "id": "SUP0006",
+        "company": "上海步科自动化股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "刘女士"
+      },
+      {
+        "id": "SUP0007",
+        "company": "深圳市正运动技术有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "周先生"
+      },
+      {
+        "id": "SUP0008",
+        "company": "英孚康（浙江）工业技术有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "吴女士"
+      },
+      {
+        "id": "SUP0009",
+        "company": "西门子（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "徐先生"
+      },
+      {
+        "id": "SUP0010",
+        "company": "欧姆龙自动化（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "孙女士"
+      },
+      {
+        "id": "SUP0011",
+        "company": "东莞怡合达自动化股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "胡先生"
+      },
+      {
+        "id": "SUP0012",
+        "company": "米思米（中国）精密机械贸易有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "朱女士"
+      },
+      {
+        "id": "SUP0013",
+        "company": "深圳市速加科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "高先生"
+      },
+      {
+        "id": "SUP0014",
+        "company": "深圳嘉立创科技集团股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "林女士"
+      },
+      {
+        "id": "SUP0015",
+        "company": "东莞市智威精密制造有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "何先生"
+      },
+      {
+        "id": "SUP0017",
+        "company": "江苏宝馨科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "马先生"
+      },
+      {
+        "id": "SUP0018",
+        "company": "苏州东山精密制造股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "罗女士"
+      },
+      {
+        "id": "SUP0022",
+        "company": "深圳市铭利达精密技术股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "谢女士"
+      },
+      {
+        "id": "SUP0023",
+        "company": "北京中科三环高技术股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "韩先生"
+      },
+      {
+        "id": "SUP0024",
+        "company": "宁波韵升股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "唐女士"
+      },
+      {
+        "id": "SUP0025",
+        "company": "江西金力永磁科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "冯先生"
+      },
+      {
+        "id": "SUP0026",
+        "company": "烟台正海磁性材料股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "于女士"
+      },
+      {
+        "id": "SUP0027",
+        "company": "浙江英洛华磁业有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "董先生"
+      },
+      {
+        "id": "SUP0028",
+        "company": "安徽大地熊新材料股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "萧女士"
+      },
+      {
+        "id": "SUP0029",
+        "company": "南京工艺装备制造有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "程先生"
+      },
+      {
+        "id": "SUP0030",
+        "company": "广东凯特精密机械有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "曹女士"
+      },
+      {
+        "id": "SUP0031",
+        "company": "山东博特精工股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "袁先生"
+      },
+      {
+        "id": "SUP0032",
+        "company": "山东赛尔机械导轨有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "邓女士"
+      },
+      {
+        "id": "SUP0033",
+        "company": "上银科技（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "许先生"
+      },
+      {
+        "id": "SUP0034",
+        "company": "蒂业技凯（中国）投资有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "傅女士"
+      },
+      {
+        "id": "SUP0035",
+        "company": "上海鸣志电器股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "沈先生"
+      },
+      {
+        "id": "SUP0036",
+        "company": "江苏雷利电机股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "曾女士"
+      },
+      {
+        "id": "SUP0038",
+        "company": "南京埃斯顿自动化股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "吕女士"
+      },
+      {
+        "id": "SUP0039",
+        "company": "杭州步进科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "苏先生"
+      },
+      {
+        "id": "SUP0041",
+        "company": "深圳市英威腾电气股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "张先生"
+      },
+      {
+        "id": "SUP0042",
+        "company": "苏州伟创电气科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "王女士"
+      },
+      {
+        "id": "SUP0043",
+        "company": "深圳市正弦电气股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "李先生"
+      },
+      {
+        "id": "SUP0044",
+        "company": "上海新时达电气股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "赵女士"
+      },
+      {
+        "id": "SUP0045",
+        "company": "深圳市蓝海华腾技术股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "陈先生"
+      },
+      {
+        "id": "SUP0046",
+        "company": "北京和利时电机技术有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "刘女士"
+      },
+      {
+        "id": "SUP0047",
+        "company": "南京菲尼克斯电气有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "周先生"
+      },
+      {
+        "id": "SUP0048",
+        "company": "万可电子（天津）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "吴女士"
+      },
+      {
+        "id": "SUP0049",
+        "company": "魏德米勒电联接（上海）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "徐先生"
+      },
+      {
+        "id": "SUP0050",
+        "company": "宁波高松电子有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "孙女士"
+      },
+      {
+        "id": "SUP0051",
+        "company": "宁波速普电子有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "胡先生"
+      },
+      {
+        "id": "SUP0052",
+        "company": "町洋机电（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "朱女士"
+      },
+      {
+        "id": "SUP0053",
+        "company": "施耐德电气（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "高先生"
+      },
+      {
+        "id": "SUP0054",
+        "company": "上海天逸电器有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "林女士"
+      },
+      {
+        "id": "SUP0055",
+        "company": "浙江正泰电器股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "何先生"
+      },
+      {
+        "id": "SUP0056",
+        "company": "德力西电气有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "郭女士"
+      },
+      {
+        "id": "SUP0057",
+        "company": "爱德克电气贸易（上海）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "马先生"
+      },
+      {
+        "id": "SUP0058",
+        "company": "施迈赛工业开关制造（上海）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "罗女士"
+      },
+      {
+        "id": "SUP0059",
+        "company": "安徽中鼎密封件股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "梁先生"
+      },
+      {
+        "id": "SUP0060",
+        "company": "上海唯万密封科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "宋女士"
+      },
+      {
+        "id": "SUP0061",
+        "company": "成都盛帮密封件股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "郑先生"
+      },
+      {
+        "id": "SUP0062",
+        "company": "优泰科（苏州）密封技术有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "谢女士"
+      },
+      {
+        "id": "SUP0063",
+        "company": "无锡恩福油封有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "韩先生"
+      },
+      {
+        "id": "SUP0064",
+        "company": "特瑞堡密封系统（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "唐女士"
+      },
+      {
+        "id": "SUP0065",
+        "company": "苏州玖钧智能装备有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "冯先生"
+      },
+      {
+        "id": "SUP0066",
+        "company": "东佑达机器人（苏州）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "于女士"
+      },
+      {
+        "id": "SUP0067",
+        "company": "广东天功自动化科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "董先生"
+      },
+      {
+        "id": "SUP0068",
+        "company": "深圳市赛瑞德精工机械技术有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "萧女士"
+      },
+      {
+        "id": "SUP0069",
+        "company": "东莞市高工智能传动股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "程先生"
+      },
+      {
+        "id": "SUP0071",
+        "company": "宁波横河精密工业股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "袁先生"
+      },
+      {
+        "id": "SUP0072",
+        "company": "宁波天龙电子股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "邓女士"
+      },
+      {
+        "id": "SUP0073",
+        "company": "上海肇民新材料科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "许先生"
+      },
+      {
+        "id": "SUP0074",
+        "company": "厦门唯科模塑科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "傅女士"
+      },
+      {
+        "id": "SUP0075",
+        "company": "上海亚虹模具股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "沈先生"
+      },
+      {
+        "id": "SUP0076",
+        "company": "宁波利安科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "曾女士"
+      },
+      {
+        "id": "SUP0077",
+        "company": "孝感华工高理电子有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "彭先生"
+      },
+      {
+        "id": "SUP0078",
+        "company": "深圳市特普生科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "吕女士"
+      },
+      {
+        "id": "SUP0079",
+        "company": "常州市惠昌传感器有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "苏先生"
+      },
+      {
+        "id": "SUP0080",
+        "company": "深圳安培龙科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "卢女士"
+      },
+      {
+        "id": "SUP0081",
+        "company": "上海自动化仪表有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "张先生"
+      },
+      {
+        "id": "SUP0082",
+        "company": "天津市中环温度仪表有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "王女士"
+      },
+      {
+        "id": "SUP0083",
+        "company": "广东兴发铝业有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "李先生"
+      },
+      {
+        "id": "SUP0084",
+        "company": "广东坚美铝型材厂（集团）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "赵女士"
+      },
+      {
+        "id": "SUP0085",
+        "company": "广东凤铝铝业有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "陈先生"
+      },
+      {
+        "id": "SUP0086",
+        "company": "广东伟业铝厂集团有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "刘女士"
+      },
+      {
+        "id": "SUP0087",
+        "company": "广东豪美新材股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "周先生"
+      },
+      {
+        "id": "SUP0088",
+        "company": "广东和胜工业铝材股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "吴女士"
+      },
+      {
+        "id": "SUP0089",
+        "company": "明纬（广州）电子有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "徐先生"
+      },
+      {
+        "id": "SUP0090",
+        "company": "上海衡孚电子科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "孙女士"
+      },
+      {
+        "id": "SUP0091",
+        "company": "广州金升阳科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "胡先生"
+      },
+      {
+        "id": "SUP0092",
+        "company": "茂硕电源科技股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "朱女士"
+      },
+      {
+        "id": "SUP0093",
+        "company": "深圳欧陆通电子股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "高先生"
+      },
+      {
+        "id": "SUP0094",
+        "company": "江苏台源明纬电子科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "林女士"
+      },
+      {
+        "id": "SUP0095",
+        "company": "瓦房店轴承集团有限责任公司",
+        "email": "supplier@example.invalid",
+        "salutation": "何先生"
+      },
+      {
+        "id": "SUP0096",
+        "company": "洛阳轴承集团股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "郭女士"
+      },
+      {
+        "id": "SUP0097",
+        "company": "哈尔滨轴承集团有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "马先生"
+      },
+      {
+        "id": "SUP0098",
+        "company": "人本股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "罗女士"
+      },
+      {
+        "id": "SUP0099",
+        "company": "慈兴集团有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "梁先生"
+      },
+      {
+        "id": "SUP0100",
+        "company": "浙江五洲新春集团股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "宋女士"
+      },
+      {
+        "id": "SUP0101",
+        "company": "无锡富望德科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      },
+      {
+        "id": "SUP0102",
+        "company": "无锡鑫横源智能装备制造有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      },
+      {
+        "id": "SUP0103",
+        "company": "无锡勤顺机械科技有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      },
+      {
+        "id": "SUP0104",
+        "company": "德马科技集团股份有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      },
+      {
+        "id": "SUP0105",
+        "company": "普联技术有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      },
+      {
+        "id": "SUP0106",
+        "company": "上海上恒电子有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      },
+      {
+        "id": "SUP0107",
+        "company": "费斯托（中国）有限公司",
+        "email": "supplier@example.invalid",
+        "salutation": "销售负责人"
+      }
+    ],
+    "supplier_groups": [
+      {
+        "supplier_id": "SUP0001",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0001",
+        "group_id": "MG006"
+      },
+      {
+        "supplier_id": "SUP0001",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0001",
+        "group_id": "MG032"
+      },
+      {
+        "supplier_id": "SUP0002",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0003",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0004",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0005",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0006",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0007",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0008",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0008",
+        "group_id": "MG006"
+      },
+      {
+        "supplier_id": "SUP0008",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0008",
+        "group_id": "MG023"
+      },
+      {
+        "supplier_id": "SUP0008",
+        "group_id": "MG032"
+      },
+      {
+        "supplier_id": "SUP0009",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0009",
+        "group_id": "MG020"
+      },
+      {
+        "supplier_id": "SUP0009",
+        "group_id": "MG021"
+      },
+      {
+        "supplier_id": "SUP0010",
+        "group_id": "MG001"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG002"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG017"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG018"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG022"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG026"
+      },
+      {
+        "supplier_id": "SUP0011",
+        "group_id": "MG029"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG002"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG017"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG018"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG019"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG022"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG026"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG027"
+      },
+      {
+        "supplier_id": "SUP0012",
+        "group_id": "MG029"
+      },
+      {
+        "supplier_id": "SUP0013",
+        "group_id": "MG002"
+      },
+      {
+        "supplier_id": "SUP0013",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0013",
+        "group_id": "MG017"
+      },
+      {
+        "supplier_id": "SUP0013",
+        "group_id": "MG031"
+      },
+      {
+        "supplier_id": "SUP0014",
+        "group_id": "MG002"
+      },
+      {
+        "supplier_id": "SUP0014",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0014",
+        "group_id": "MG017"
+      },
+      {
+        "supplier_id": "SUP0014",
+        "group_id": "MG031"
+      },
+      {
+        "supplier_id": "SUP0015",
+        "group_id": "MG002"
+      },
+      {
+        "supplier_id": "SUP0015",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0015",
+        "group_id": "MG017"
+      },
+      {
+        "supplier_id": "SUP0015",
+        "group_id": "MG031"
+      },
+      {
+        "supplier_id": "SUP0017",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0018",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0022",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0023",
+        "group_id": "MG004"
+      },
+      {
+        "supplier_id": "SUP0024",
+        "group_id": "MG004"
+      },
+      {
+        "supplier_id": "SUP0025",
+        "group_id": "MG004"
+      },
+      {
+        "supplier_id": "SUP0026",
+        "group_id": "MG004"
+      },
+      {
+        "supplier_id": "SUP0027",
+        "group_id": "MG004"
+      },
+      {
+        "supplier_id": "SUP0028",
+        "group_id": "MG004"
+      },
+      {
+        "supplier_id": "SUP0029",
+        "group_id": "MG005"
+      },
+      {
+        "supplier_id": "SUP0030",
+        "group_id": "MG005"
+      },
+      {
+        "supplier_id": "SUP0031",
+        "group_id": "MG005"
+      },
+      {
+        "supplier_id": "SUP0032",
+        "group_id": "MG005"
+      },
+      {
+        "supplier_id": "SUP0033",
+        "group_id": "MG005"
+      },
+      {
+        "supplier_id": "SUP0034",
+        "group_id": "MG005"
+      },
+      {
+        "supplier_id": "SUP0035",
+        "group_id": "MG006"
+      },
+      {
+        "supplier_id": "SUP0036",
+        "group_id": "MG006"
+      },
+      {
+        "supplier_id": "SUP0038",
+        "group_id": "MG006"
+      },
+      {
+        "supplier_id": "SUP0038",
+        "group_id": "MG030"
+      },
+      {
+        "supplier_id": "SUP0039",
+        "group_id": "MG006"
+      },
+      {
+        "supplier_id": "SUP0041",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0042",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0043",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0044",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0045",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0046",
+        "group_id": "MG007"
+      },
+      {
+        "supplier_id": "SUP0047",
+        "group_id": "MG008"
+      },
+      {
+        "supplier_id": "SUP0048",
+        "group_id": "MG008"
+      },
+      {
+        "supplier_id": "SUP0049",
+        "group_id": "MG008"
+      },
+      {
+        "supplier_id": "SUP0050",
+        "group_id": "MG008"
+      },
+      {
+        "supplier_id": "SUP0051",
+        "group_id": "MG008"
+      },
+      {
+        "supplier_id": "SUP0052",
+        "group_id": "MG008"
+      },
+      {
+        "supplier_id": "SUP0053",
+        "group_id": "MG009"
+      },
+      {
+        "supplier_id": "SUP0054",
+        "group_id": "MG009"
+      },
+      {
+        "supplier_id": "SUP0055",
+        "group_id": "MG009"
+      },
+      {
+        "supplier_id": "SUP0056",
+        "group_id": "MG009"
+      },
+      {
+        "supplier_id": "SUP0057",
+        "group_id": "MG009"
+      },
+      {
+        "supplier_id": "SUP0058",
+        "group_id": "MG009"
+      },
+      {
+        "supplier_id": "SUP0059",
+        "group_id": "MG010"
+      },
+      {
+        "supplier_id": "SUP0060",
+        "group_id": "MG010"
+      },
+      {
+        "supplier_id": "SUP0061",
+        "group_id": "MG010"
+      },
+      {
+        "supplier_id": "SUP0062",
+        "group_id": "MG010"
+      },
+      {
+        "supplier_id": "SUP0063",
+        "group_id": "MG010"
+      },
+      {
+        "supplier_id": "SUP0064",
+        "group_id": "MG010"
+      },
+      {
+        "supplier_id": "SUP0065",
+        "group_id": "MG011"
+      },
+      {
+        "supplier_id": "SUP0066",
+        "group_id": "MG011"
+      },
+      {
+        "supplier_id": "SUP0067",
+        "group_id": "MG011"
+      },
+      {
+        "supplier_id": "SUP0068",
+        "group_id": "MG011"
+      },
+      {
+        "supplier_id": "SUP0069",
+        "group_id": "MG011"
+      },
+      {
+        "supplier_id": "SUP0071",
+        "group_id": "MG012"
+      },
+      {
+        "supplier_id": "SUP0072",
+        "group_id": "MG012"
+      },
+      {
+        "supplier_id": "SUP0073",
+        "group_id": "MG012"
+      },
+      {
+        "supplier_id": "SUP0074",
+        "group_id": "MG012"
+      },
+      {
+        "supplier_id": "SUP0075",
+        "group_id": "MG012"
+      },
+      {
+        "supplier_id": "SUP0076",
+        "group_id": "MG012"
+      },
+      {
+        "supplier_id": "SUP0077",
+        "group_id": "MG013"
+      },
+      {
+        "supplier_id": "SUP0078",
+        "group_id": "MG013"
+      },
+      {
+        "supplier_id": "SUP0079",
+        "group_id": "MG013"
+      },
+      {
+        "supplier_id": "SUP0080",
+        "group_id": "MG013"
+      },
+      {
+        "supplier_id": "SUP0081",
+        "group_id": "MG013"
+      },
+      {
+        "supplier_id": "SUP0082",
+        "group_id": "MG013"
+      },
+      {
+        "supplier_id": "SUP0083",
+        "group_id": "MG014"
+      },
+      {
+        "supplier_id": "SUP0084",
+        "group_id": "MG014"
+      },
+      {
+        "supplier_id": "SUP0085",
+        "group_id": "MG014"
+      },
+      {
+        "supplier_id": "SUP0086",
+        "group_id": "MG014"
+      },
+      {
+        "supplier_id": "SUP0087",
+        "group_id": "MG014"
+      },
+      {
+        "supplier_id": "SUP0088",
+        "group_id": "MG014"
+      },
+      {
+        "supplier_id": "SUP0089",
+        "group_id": "MG015"
+      },
+      {
+        "supplier_id": "SUP0090",
+        "group_id": "MG015"
+      },
+      {
+        "supplier_id": "SUP0091",
+        "group_id": "MG015"
+      },
+      {
+        "supplier_id": "SUP0092",
+        "group_id": "MG015"
+      },
+      {
+        "supplier_id": "SUP0093",
+        "group_id": "MG015"
+      },
+      {
+        "supplier_id": "SUP0094",
+        "group_id": "MG015"
+      },
+      {
+        "supplier_id": "SUP0095",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0096",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0097",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0098",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0099",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0100",
+        "group_id": "MG016"
+      },
+      {
+        "supplier_id": "SUP0101",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0102",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0103",
+        "group_id": "MG003"
+      },
+      {
+        "supplier_id": "SUP0104",
+        "group_id": "MG028"
+      },
+      {
+        "supplier_id": "SUP0105",
+        "group_id": "MG020"
+      },
+      {
+        "supplier_id": "SUP0106",
+        "group_id": "MG025"
+      },
+      {
+        "supplier_id": "SUP0107",
+        "group_id": "MG019"
+      },
+      {
+        "supplier_id": "SUP0107",
+        "group_id": "MG024"
+      }
+    ],
+    "statuses": [
+      {
+        "id": 10,
+        "name": "待询价"
+      },
+      {
+        "id": 20,
+        "name": "待报价"
+      },
+      {
+        "id": 30,
+        "name": "待下单"
+      },
+      {
+        "id": 40,
+        "name": "待交付"
+      },
+      {
+        "id": 50,
+        "name": "待付款"
+      },
+      {
+        "id": 90,
+        "name": "已完成"
+      },
+      {
+        "id": 99,
+        "name": "已取消"
+      }
+    ],
+    "requisitions": [
+      {
+        "id": "20261030AI",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40015004861",
+        "material_name": "铝型材",
+        "model": "X337-05-007-B",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-07-01",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030AK",
+        "status_id": 10,
+        "group_id": "MG032",
+        "group_name": "电池",
+        "project": "RFM008-00201PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.05.10.0031",
+        "material_name": "电池",
+        "model": "S6-C4A",
+        "unit": "件",
+        "quantity": "11",
+        "required_date": "2026-11-15",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030AL",
+        "status_id": 10,
+        "group_id": "MG013",
+        "group_name": "温度传感器类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "06.04.0047",
+        "material_name": "测温传感器",
+        "model": "YCR15AC",
+        "unit": "件",
+        "quantity": "10",
+        "required_date": "2027-05-25",
+        "brand": "50合乐",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030BD",
+        "status_id": 10,
+        "group_id": "MG011",
+        "group_name": "模组",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "10504000625",
+        "material_name": "直线模组",
+        "model": "TPA-GCR-120-1610C-L",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-10",
+        "brand": "TPA",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030BH",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0036",
+        "material_name": "档条",
+        "model": "X633-08-102-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-03",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030BI",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0038",
+        "material_name": "定位柱B",
+        "model": "X510-11-009-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-12-16",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030BP",
+        "status_id": 10,
+        "group_id": "MG027",
+        "group_name": "减速器",
+        "project": "CJQ001",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0026",
+        "material_name": "中空旋转平台",
+        "model": "DG085-10",
+        "unit": "件",
+        "quantity": "5",
+        "required_date": "2027-06-06",
+        "brand": "锋格",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030BX",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104387",
+        "material_name": "限位板",
+        "model": "X581-40-004-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-02-04",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030CM",
+        "status_id": 10,
+        "group_id": "MG011",
+        "group_name": "模组",
+        "project": "TMS239-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "10-013-A",
+        "material_name": "隔套",
+        "model": "X010-03-013-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-03-25",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030CP",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40015004860",
+        "material_name": "铝型材(4780)",
+        "model": "X337-05-019-C",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-06-03",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030CS",
+        "status_id": 10,
+        "group_id": "MG025",
+        "group_name": "滤波器",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "30203000210",
+        "material_name": "滤波器",
+        "model": "SH280-30-TB",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-25",
+        "brand": "上恒(Sunhenry)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030DR",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "RD02043-1",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0019",
+        "material_name": "内10外圈工装",
+        "model": "X532-43-031-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-01-06",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030EK",
+        "status_id": 10,
+        "group_id": "MG016",
+        "group_name": "轴承类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.04.11.0019",
+        "material_name": "深沟球轴承",
+        "model": "BAU6004Z",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-02-28",
+        "brand": "怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030EM",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0009",
+        "material_name": "型材安装板",
+        "model": "DFM009-21-00-007-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-03-12",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030EU",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0017",
+        "material_name": "型材",
+        "model": "DFM009-21-00-004-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-04-12",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030EW",
+        "status_id": 10,
+        "group_id": "MG020",
+        "group_name": "工业网络设备",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "14.07.0007",
+        "material_name": "工业路由器",
+        "model": "TL-R483G工业级",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-06-03",
+        "brand": "普联TP-LINK",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030FC",
+        "status_id": 10,
+        "group_id": "MG004",
+        "group_name": "磁铁·磁性产品",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.02.15.0022",
+        "material_name": "带孔磁铁",
+        "model": "直径36mm*高7mm",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-08",
+        "brand": "淘宝 新乐磁业",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030FL",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "RD02043-1",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0020",
+        "material_name": "22外圈工装",
+        "model": "X532-43-032-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-02-07",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030FO",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0037",
+        "material_name": "托齿",
+        "model": "QBA553-51-03-010-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-03-13",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030FR",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "TMS075-00702G",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0021",
+        "material_name": "垫板",
+        "model": "X337-04-005-B",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-05-23",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030FS",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "RD02043-1",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40012006758",
+        "material_name": "工艺辊",
+        "model": "X532-43-142-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-06",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030FX",
+        "status_id": 10,
+        "group_id": "MG006",
+        "group_name": "电机",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0033",
+        "material_name": "伺服电机",
+        "model": "ICM-B0701-302MM-NKS",
+        "unit": "件",
+        "quantity": "13",
+        "required_date": "2027-05-17",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030GH",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0029",
+        "material_name": "伺服驱动器",
+        "model": "ICM-D1CS18S",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-01-11",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030GK",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0006",
+        "material_name": "固定板",
+        "model": "X337-05-015-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-21",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030GT",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "X072-06-019-B",
+        "material_name": "滚轮底座",
+        "model": "X072-06-019-B",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-27",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030GX",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0039",
+        "material_name": "旋钮面板二",
+        "model": "X191-21-010-C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-01-11",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030HI",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0013",
+        "material_name": "缓冲块",
+        "model": "X153-40-007-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2026-12-02",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030HM",
+        "status_id": 10,
+        "group_id": "MG016",
+        "group_name": "轴承类",
+        "project": "CBLO01-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.04.11.0040",
+        "material_name": "轴承",
+        "model": "BAY6905ZZ",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2026-11-08",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030HV",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "QBA558-00111PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "401074296",
+        "material_name": "垫块",
+        "model": "QBA553-19-00-001-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2026-11-03",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030HX",
+        "status_id": 10,
+        "group_id": "MG018",
+        "group_name": "传动轮",
+        "project": "TMS255-16803PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40041200093",
+        "material_name": "贴布PU圈滚轮",
+        "model": "X233-03-015-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2026-12-15",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030ID",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "TMS075-00702G",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0022",
+        "material_name": "侧垫板1",
+        "model": "X337-04-002-B",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-04-19",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030IN",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0015",
+        "material_name": "铝型材",
+        "model": "X581-40-010-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-12-11",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030IR",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0007",
+        "material_name": "滚轮安装板",
+        "model": "DFM009-21-00-006-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-04-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030JA",
+        "status_id": 10,
+        "group_id": "MG018",
+        "group_name": "传动轮",
+        "project": "TMS239-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "06-0316-A",
+        "material_name": "滚轮",
+        "model": "X086-0316-A",
+        "unit": "件",
+        "quantity": "6",
+        "required_date": "2027-01-13",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030JK",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "4001201579",
+        "material_name": "垫片",
+        "model": "X328-09-015-A",
+        "unit": "件",
+        "quantity": "116",
+        "required_date": "2027-03-02",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030JO",
+        "status_id": 10,
+        "group_id": "MG030",
+        "group_name": "机器人",
+        "project": "QBA554-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0032",
+        "material_name": "机器人",
+        "model": "ER20B-1745-PV",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-08",
+        "brand": "埃斯顿",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030JP",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40041610535",
+        "material_name": "SSM聚氨酯环形同步带",
+        "model": "DFM009-21-00-003-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-03-02",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030JQ",
+        "status_id": 10,
+        "group_id": "MG024",
+        "group_name": "线缆",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "306060000000",
+        "material_name": "电磁阀线缆",
+        "model": "NEBV-H1G2-KN-1.5-LF",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-05-06",
+        "brand": "费斯托(Festo)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030KD",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X017-14-006-A",
+        "material_name": "皮带固定板1",
+        "model": "X017-14-006-A",
+        "unit": "件",
+        "quantity": "6",
+        "required_date": "2027-01-26",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030LC",
+        "status_id": 10,
+        "group_id": "MG026",
+        "group_name": "联轴器",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "310600000000",
+        "material_name": "膜片联轴器",
+        "model": "DBN11-082-d16-e22-F",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-04-10",
+        "brand": "参考怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030LE",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0010",
+        "material_name": "光电挡板钣金",
+        "model": "X581-40-003-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-05",
+        "brand": "N/A",
+        "historical_supplier": "无锡鑫横源智能装备制造有限公司"
+      },
+      {
+        "id": "20261030LG",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0001",
+        "material_name": "光电安装钣金",
+        "model": "X253-07-002-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2026-11-07",
+        "brand": "N/A",
+        "historical_supplier": "无锡富望德科技有限公司"
+      },
+      {
+        "id": "20261030LZ",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40015002684",
+        "material_name": "铝型材",
+        "model": "X439-09-001-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-03-09",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030MJ",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "RAM001-00202YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "30501000247",
+        "material_name": "数字量输入模块",
+        "model": "GL20-3200END",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-04-17",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030MK",
+        "status_id": 10,
+        "group_id": "MG019",
+        "group_name": "气源处理类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "1083001289",
+        "material_name": "过滤器",
+        "model": "YZFC76-B-YSC",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-14",
+        "brand": "威仕喜(YSC)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030ML",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0002",
+        "material_name": "上压片",
+        "model": "X337-09-002-A",
+        "unit": "件",
+        "quantity": "29",
+        "required_date": "2026-11-13",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030MP",
+        "status_id": 10,
+        "group_id": "MG006",
+        "group_name": "电机",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "10502000113",
+        "material_name": "伺服电机",
+        "model": "MS1H4-75B30CB-T331R",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-11-12",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030MX",
+        "status_id": 10,
+        "group_id": "MG010",
+        "group_name": "密封圈",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.02.12.0409",
+        "material_name": "耐高温密封圈",
+        "model": "内径12.5*Φ1.8",
+        "unit": "件",
+        "quantity": "20",
+        "required_date": "2027-04-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030ND",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0012",
+        "material_name": "安装钣金",
+        "model": "X581-40-006-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-02-25",
+        "brand": "N/A",
+        "historical_supplier": "无锡勤顺机械科技有限公司"
+      },
+      {
+        "id": "20261030NF",
+        "status_id": 10,
+        "group_id": "MG029",
+        "group_name": "门配件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "40104000459",
+        "material_name": "工业安全挂锁",
+        "model": "Z38P-KA",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-06-05",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030NI",
+        "status_id": 10,
+        "group_id": "MG021",
+        "group_name": "工业网卡",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "12.05.0097",
+        "material_name": "IC卡",
+        "model": "12.05.0097",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-13",
+        "brand": "https://item.taobao.com/item.htm?id=2S",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030NQ",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0023",
+        "material_name": "CPU",
+        "model": "ICCEC200ERM",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-12-10",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030NW",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X097-15-003-A",
+        "material_name": "后限位板",
+        "model": "X097-15-003-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-05-19",
+        "brand": "N/A",
+        "historical_supplier": "无锡勤顺机械科技有限公司"
+      },
+      {
+        "id": "20261030NX",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0016",
+        "material_name": "型材横梁2",
+        "model": "DFM009-21-00-001-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-04-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030OB",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0005",
+        "material_name": "调整块",
+        "model": "X222-09-002-A",
+        "unit": "件",
+        "quantity": "29",
+        "required_date": "2026-11-22",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030OG",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104388",
+        "material_name": "连接板",
+        "model": "X581-40-009-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2026-12-31",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030OM",
+        "status_id": 10,
+        "group_id": "MG023",
+        "group_name": "通讯模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "30705000146",
+        "material_name": "远程耦合器",
+        "model": "ICD-BAENTR",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-03-11",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030ON",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "03.04.0004",
+        "material_name": "急停按钮",
+        "model": "XB2BS542C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-16",
+        "brand": "施耐德(Schneider)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030PE",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X018-14-009-A",
+        "material_name": "轴环",
+        "model": "X018-14-009-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-03-08",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030PG",
+        "status_id": 10,
+        "group_id": "MG022",
+        "group_name": "型材用配件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "12.14.14.9008",
+        "material_name": "端盖",
+        "model": "ARC51-G408-8080",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-05-07",
+        "brand": "参考怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030PH",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0024",
+        "material_name": "数字量输入模块",
+        "model": "ICD-BIQ16",
+        "unit": "件",
+        "quantity": "20",
+        "required_date": "2027-06-27",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030PU",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "TMS237-00111PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "30501000248",
+        "material_name": "数字量输出模块",
+        "model": "GL20-0032ETN",
+        "unit": "件",
+        "quantity": "5",
+        "required_date": "2027-04-16",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030PX",
+        "status_id": 10,
+        "group_id": "MG011",
+        "group_name": "模组",
+        "project": "QBA554-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0027",
+        "material_name": "直线模组",
+        "model": "TPA-HNR-105D-1610C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-11-15",
+        "brand": "TPA",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030QM",
+        "status_id": 10,
+        "group_id": "MG032",
+        "group_name": "电池",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "301020000000",
+        "material_name": "电池",
+        "model": "ICM-BAT01",
+        "unit": "件",
+        "quantity": "32",
+        "required_date": "2027-01-09",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030QQ",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0018",
+        "material_name": "型材",
+        "model": "DFM009-21-00-002-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-20",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030RB",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0003",
+        "material_name": "浮动接头",
+        "model": "X147-10-020-C",
+        "unit": "件",
+        "quantity": "29",
+        "required_date": "2027-05-28",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030RM",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X018-15-009-A",
+        "material_name": "远程光电钣金",
+        "model": "X018-15-009-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-11-26",
+        "brand": "切换光电钣金",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030RX",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "302060000000",
+        "material_name": "22mm金属按钮开关配套",
+        "model": "P2N-22N-5.3m",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-04",
+        "brand": "上海天逸",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030SD",
+        "status_id": 10,
+        "group_id": "MG008",
+        "group_name": "端子",
+        "project": "TMS238-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "02.09.0404",
+        "material_name": "快速接线端子",
+        "model": "4进4出",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-25",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030SK",
+        "status_id": 10,
+        "group_id": "MG006",
+        "group_name": "电机",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0034",
+        "material_name": "伺服电机",
+        "model": "ICM-B0701-302MM-BKS",
+        "unit": "件",
+        "quantity": "10",
+        "required_date": "2026-12-04",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030SW",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "30206000022",
+        "material_name": "TMB金属一体式按钮",
+        "model": "TMB2-PD11-J024/G25",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-04",
+        "brand": "上海天逸",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030TD",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104385",
+        "material_name": "挡块",
+        "model": "X581-40-005-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-04-07",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030UD",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104386",
+        "material_name": "安装底板",
+        "model": "X581-40-002-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-02-01",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030VM",
+        "status_id": 10,
+        "group_id": "MG031",
+        "group_name": "机架类零件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "400310000000",
+        "material_name": "左手机架",
+        "model": "QBA553-591-01-000-E",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-02-20",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030WA",
+        "status_id": 10,
+        "group_id": "MG028",
+        "group_name": "自研模组",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0031",
+        "material_name": "对接输送线1",
+        "model": "QBA554-33-02-000-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-06-08",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030WJ",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0008",
+        "material_name": "垫条",
+        "model": "DFM009-21-00-005-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-01-11",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030WS",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0025",
+        "material_name": "数字量输出模块",
+        "model": "ICD-BOV16",
+        "unit": "件",
+        "quantity": "11",
+        "required_date": "2027-02-15",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030XF",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0028",
+        "material_name": "伺服驱动器",
+        "model": "ICM-D1CS11S",
+        "unit": "件",
+        "quantity": "28",
+        "required_date": "2026-11-07",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030XI",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0014",
+        "material_name": "连接型材",
+        "model": "X581-40-008-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030XT",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0004",
+        "material_name": "安装板1",
+        "model": "X476-08-004-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-03-26",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030XU",
+        "status_id": 10,
+        "group_id": "MG018",
+        "group_name": "传动轮",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "12.04.07.0137",
+        "material_name": "惰轮",
+        "model": "EVD21-24-T10250-FC7",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-02-16",
+        "brand": "参考怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030XX",
+        "status_id": 10,
+        "group_id": "MG028",
+        "group_name": "自研模组",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0030",
+        "material_name": "对接输送线2",
+        "model": "QBA554-33-00-003-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-03-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030YB",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "TMS262-1950IPD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.05.03.0047",
+        "material_name": "伺服驱动器",
+        "model": "SV630NSIR61",
+        "unit": "件",
+        "quantity": "10",
+        "required_date": "2026-12-25",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030YI",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0035",
+        "material_name": "整形板",
+        "model": "X524-50-013-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-01-23",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030YL",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.05.03.0049",
+        "material_name": "伺服驱动器",
+        "model": "SV630NS5R5I",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-04-02",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030YQ",
+        "status_id": 10,
+        "group_id": "MG032",
+        "group_name": "电池",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40403000017",
+        "material_name": "电池",
+        "model": "S6-C4A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-03-01",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030YZ",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0011",
+        "material_name": "安装钣金2",
+        "model": "X581-40-007-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-14",
+        "brand": "N/A",
+        "historical_supplier": "无锡勤顺机械科技有限公司"
+      },
+      {
+        "id": "20261030ZA",
+        "status_id": 10,
+        "group_id": "MG005",
+        "group_name": "导轨/滑轨",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.03.0922",
+        "material_name": "直线导轨",
+        "model": "GHW25CC2T640ZAC1+D",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-05-13",
+        "brand": "鼎翰",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030ZB",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "13.03.12.0042",
+        "material_name": "负荷开关底座",
+        "model": "V2C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-06",
+        "brand": "施耐德(Schneider)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261030ZN",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "13.03.12.0043",
+        "material_name": "负荷开关手柄",
+        "model": "KCF1P2C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-07",
+        "brand": "施耐德(Schneider)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101AI",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40015004861",
+        "material_name": "铝型材",
+        "model": "X337-05-007-B",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-07-01",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101AK",
+        "status_id": 10,
+        "group_id": "MG032",
+        "group_name": "电池",
+        "project": "RFM008-00201PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.05.10.0031",
+        "material_name": "电池",
+        "model": "S6-C4A",
+        "unit": "件",
+        "quantity": "11",
+        "required_date": "2026-11-15",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101AL",
+        "status_id": 10,
+        "group_id": "MG013",
+        "group_name": "温度传感器类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "06.04.0047",
+        "material_name": "测温传感器",
+        "model": "YCR15AC",
+        "unit": "件",
+        "quantity": "10",
+        "required_date": "2027-05-25",
+        "brand": "50合乐",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101BD",
+        "status_id": 10,
+        "group_id": "MG011",
+        "group_name": "模组",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "10504000625",
+        "material_name": "直线模组",
+        "model": "TPA-GCR-120-1610C-L",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-10",
+        "brand": "TPA",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101BH",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0036",
+        "material_name": "档条",
+        "model": "X633-08-102-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-03",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101BI",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0038",
+        "material_name": "定位柱B",
+        "model": "X510-11-009-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-12-16",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101BP",
+        "status_id": 10,
+        "group_id": "MG027",
+        "group_name": "减速器",
+        "project": "CJQ001",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0026",
+        "material_name": "中空旋转平台",
+        "model": "DG085-10",
+        "unit": "件",
+        "quantity": "5",
+        "required_date": "2027-06-06",
+        "brand": "锋格",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101BX",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104387",
+        "material_name": "限位板",
+        "model": "X581-40-004-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-02-04",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101CM",
+        "status_id": 10,
+        "group_id": "MG011",
+        "group_name": "模组",
+        "project": "TMS239-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "10-013-A",
+        "material_name": "隔套",
+        "model": "X010-03-013-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-03-25",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101CP",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40015004860",
+        "material_name": "铝型材(4780)",
+        "model": "X337-05-019-C",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-06-03",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101CS",
+        "status_id": 10,
+        "group_id": "MG025",
+        "group_name": "滤波器",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "30203000210",
+        "material_name": "滤波器",
+        "model": "SH280-30-TB",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-25",
+        "brand": "上恒(Sunhenry)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101DR",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "RD02043-1",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0019",
+        "material_name": "内10外圈工装",
+        "model": "X532-43-031-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-01-06",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101EK",
+        "status_id": 10,
+        "group_id": "MG016",
+        "group_name": "轴承类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.04.11.0019",
+        "material_name": "深沟球轴承",
+        "model": "BAU6004Z",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-02-28",
+        "brand": "怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101EM",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0009",
+        "material_name": "型材安装板",
+        "model": "DFM009-21-00-007-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-03-12",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101EU",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0017",
+        "material_name": "型材",
+        "model": "DFM009-21-00-004-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-04-12",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101EW",
+        "status_id": 10,
+        "group_id": "MG020",
+        "group_name": "工业网络设备",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "14.07.0007",
+        "material_name": "工业路由器",
+        "model": "TL-R483G工业级",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-06-03",
+        "brand": "普联TP-LINK",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101FC",
+        "status_id": 10,
+        "group_id": "MG004",
+        "group_name": "磁铁·磁性产品",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.02.15.0022",
+        "material_name": "带孔磁铁",
+        "model": "直径36mm*高7mm",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-08",
+        "brand": "淘宝 新乐磁业",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101FL",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "RD02043-1",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0020",
+        "material_name": "22外圈工装",
+        "model": "X532-43-032-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-02-07",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101FO",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0037",
+        "material_name": "托齿",
+        "model": "QBA553-51-03-010-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-03-13",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101FR",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "TMS075-00702G",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0021",
+        "material_name": "垫板",
+        "model": "X337-04-005-B",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-05-23",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101FS",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "RD02043-1",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40012006758",
+        "material_name": "工艺辊",
+        "model": "X532-43-142-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-06",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101FX",
+        "status_id": 10,
+        "group_id": "MG006",
+        "group_name": "电机",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0033",
+        "material_name": "伺服电机",
+        "model": "ICM-B0701-302MM-NKS",
+        "unit": "件",
+        "quantity": "13",
+        "required_date": "2027-05-17",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101GH",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0029",
+        "material_name": "伺服驱动器",
+        "model": "ICM-D1CS18S",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-01-11",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101GK",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0006",
+        "material_name": "固定板",
+        "model": "X337-05-015-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-21",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101GT",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "X072-06-019-B",
+        "material_name": "滚轮底座",
+        "model": "X072-06-019-B",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-27",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101GX",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0039",
+        "material_name": "旋钮面板二",
+        "model": "X191-21-010-C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-01-11",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101HI",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0013",
+        "material_name": "缓冲块",
+        "model": "X153-40-007-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2026-12-02",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101HM",
+        "status_id": 10,
+        "group_id": "MG016",
+        "group_name": "轴承类",
+        "project": "CBLO01-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.04.11.0040",
+        "material_name": "轴承",
+        "model": "BAY6905ZZ",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2026-11-08",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101HV",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "QBA558-00111PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "401074296",
+        "material_name": "垫块",
+        "model": "QBA553-19-00-001-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2026-11-03",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101HX",
+        "status_id": 10,
+        "group_id": "MG018",
+        "group_name": "传动轮",
+        "project": "TMS255-16803PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40041200093",
+        "material_name": "贴布PU圈滚轮",
+        "model": "X233-03-015-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2026-12-15",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101ID",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "TMS075-00702G",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0022",
+        "material_name": "侧垫板1",
+        "model": "X337-04-002-B",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-04-19",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101IN",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0015",
+        "material_name": "铝型材",
+        "model": "X581-40-010-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-12-11",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101IR",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0007",
+        "material_name": "滚轮安装板",
+        "model": "DFM009-21-00-006-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-04-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101JA",
+        "status_id": 10,
+        "group_id": "MG018",
+        "group_name": "传动轮",
+        "project": "TMS239-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "06-0316-A",
+        "material_name": "滚轮",
+        "model": "X086-0316-A",
+        "unit": "件",
+        "quantity": "6",
+        "required_date": "2027-01-13",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101JK",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "4001201579",
+        "material_name": "垫片",
+        "model": "X328-09-015-A",
+        "unit": "件",
+        "quantity": "116",
+        "required_date": "2027-03-02",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101JO",
+        "status_id": 10,
+        "group_id": "MG030",
+        "group_name": "机器人",
+        "project": "QBA554-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0032",
+        "material_name": "机器人",
+        "model": "ER20B-1745-PV",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-08",
+        "brand": "埃斯顿",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101JP",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40041610535",
+        "material_name": "SSM聚氨酯环形同步带",
+        "model": "DFM009-21-00-003-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-03-02",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101JQ",
+        "status_id": 10,
+        "group_id": "MG024",
+        "group_name": "线缆",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "306060000000",
+        "material_name": "电磁阀线缆",
+        "model": "NEBV-H1G2-KN-1.5-LF",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-05-06",
+        "brand": "费斯托(Festo)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101KD",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X017-14-006-A",
+        "material_name": "皮带固定板1",
+        "model": "X017-14-006-A",
+        "unit": "件",
+        "quantity": "6",
+        "required_date": "2027-01-26",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101LC",
+        "status_id": 10,
+        "group_id": "MG026",
+        "group_name": "联轴器",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "310600000000",
+        "material_name": "膜片联轴器",
+        "model": "DBN11-082-d16-e22-F",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-04-10",
+        "brand": "参考怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101LE",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0010",
+        "material_name": "光电挡板钣金",
+        "model": "X581-40-003-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-05",
+        "brand": "N/A",
+        "historical_supplier": "无锡鑫横源智能装备制造有限公司"
+      },
+      {
+        "id": "20261101LG",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0001",
+        "material_name": "光电安装钣金",
+        "model": "X253-07-002-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2026-11-07",
+        "brand": "N/A",
+        "historical_supplier": "无锡富望德科技有限公司"
+      },
+      {
+        "id": "20261101LZ",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40015002684",
+        "material_name": "铝型材",
+        "model": "X439-09-001-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-03-09",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101MJ",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "RAM001-00202YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "30501000247",
+        "material_name": "数字量输入模块",
+        "model": "GL20-3200END",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-04-17",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101MK",
+        "status_id": 10,
+        "group_id": "MG019",
+        "group_name": "气源处理类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "1083001289",
+        "material_name": "过滤器",
+        "model": "YZFC76-B-YSC",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-14",
+        "brand": "威仕喜(YSC)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101ML",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0002",
+        "material_name": "上压片",
+        "model": "X337-09-002-A",
+        "unit": "件",
+        "quantity": "29",
+        "required_date": "2026-11-13",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101MP",
+        "status_id": 10,
+        "group_id": "MG006",
+        "group_name": "电机",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "10502000113",
+        "material_name": "伺服电机",
+        "model": "MS1H4-75B30CB-T331R",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-11-12",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101MX",
+        "status_id": 10,
+        "group_id": "MG010",
+        "group_name": "密封圈",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.02.12.0409",
+        "material_name": "耐高温密封圈",
+        "model": "内径12.5*Φ1.8",
+        "unit": "件",
+        "quantity": "20",
+        "required_date": "2027-04-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101ND",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0012",
+        "material_name": "安装钣金",
+        "model": "X581-40-006-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-02-25",
+        "brand": "N/A",
+        "historical_supplier": "无锡勤顺机械科技有限公司"
+      },
+      {
+        "id": "20261101NF",
+        "status_id": 10,
+        "group_id": "MG029",
+        "group_name": "门配件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "40104000459",
+        "material_name": "工业安全挂锁",
+        "model": "Z38P-KA",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-06-05",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101NI",
+        "status_id": 10,
+        "group_id": "MG021",
+        "group_name": "工业网卡",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "12.05.0097",
+        "material_name": "IC卡",
+        "model": "12.05.0097",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-13",
+        "brand": "https://item.taobao.com/item.htm?id=2S",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101NQ",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0023",
+        "material_name": "CPU",
+        "model": "ICCEC200ERM",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-12-10",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101NW",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X097-15-003-A",
+        "material_name": "后限位板",
+        "model": "X097-15-003-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-05-19",
+        "brand": "N/A",
+        "historical_supplier": "无锡勤顺机械科技有限公司"
+      },
+      {
+        "id": "20261101NX",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0016",
+        "material_name": "型材横梁2",
+        "model": "DFM009-21-00-001-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-04-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101OB",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0005",
+        "material_name": "调整块",
+        "model": "X222-09-002-A",
+        "unit": "件",
+        "quantity": "29",
+        "required_date": "2026-11-22",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101OG",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104388",
+        "material_name": "连接板",
+        "model": "X581-40-009-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2026-12-31",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101OM",
+        "status_id": 10,
+        "group_id": "MG023",
+        "group_name": "通讯模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "30705000146",
+        "material_name": "远程耦合器",
+        "model": "ICD-BAENTR",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-03-11",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101ON",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "03.04.0004",
+        "material_name": "急停按钮",
+        "model": "XB2BS542C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-16",
+        "brand": "施耐德(Schneider)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101PE",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X018-14-009-A",
+        "material_name": "轴环",
+        "model": "X018-14-009-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-03-08",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101PG",
+        "status_id": 10,
+        "group_id": "MG022",
+        "group_name": "型材用配件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "12.14.14.9008",
+        "material_name": "端盖",
+        "model": "ARC51-G408-8080",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-05-07",
+        "brand": "参考怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101PH",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0024",
+        "material_name": "数字量输入模块",
+        "model": "ICD-BIQ16",
+        "unit": "件",
+        "quantity": "20",
+        "required_date": "2027-06-27",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101PU",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "TMS237-00111PD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "30501000248",
+        "material_name": "数字量输出模块",
+        "model": "GL20-0032ETN",
+        "unit": "件",
+        "quantity": "5",
+        "required_date": "2027-04-16",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101PX",
+        "status_id": 10,
+        "group_id": "MG011",
+        "group_name": "模组",
+        "project": "QBA554-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0027",
+        "material_name": "直线模组",
+        "model": "TPA-HNR-105D-1610C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-11-15",
+        "brand": "TPA",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101QM",
+        "status_id": 10,
+        "group_id": "MG032",
+        "group_name": "电池",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "301020000000",
+        "material_name": "电池",
+        "model": "ICM-BAT01",
+        "unit": "件",
+        "quantity": "32",
+        "required_date": "2027-01-09",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101QQ",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0018",
+        "material_name": "型材",
+        "model": "DFM009-21-00-002-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-20",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101RB",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0003",
+        "material_name": "浮动接头",
+        "model": "X147-10-020-C",
+        "unit": "件",
+        "quantity": "29",
+        "required_date": "2027-05-28",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101RM",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "X018-15-009-A",
+        "material_name": "远程光电钣金",
+        "model": "X018-15-009-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2026-11-26",
+        "brand": "切换光电钣金",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101RX",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "302060000000",
+        "material_name": "22mm金属按钮开关配套",
+        "model": "P2N-22N-5.3m",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-01-04",
+        "brand": "上海天逸",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101SD",
+        "status_id": 10,
+        "group_id": "MG008",
+        "group_name": "端子",
+        "project": "TMS238-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "02.09.0404",
+        "material_name": "快速接线端子",
+        "model": "4进4出",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-25",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101SK",
+        "status_id": 10,
+        "group_id": "MG006",
+        "group_name": "电机",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0034",
+        "material_name": "伺服电机",
+        "model": "ICM-B0701-302MM-BKS",
+        "unit": "件",
+        "quantity": "10",
+        "required_date": "2026-12-04",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101SW",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "30206000022",
+        "material_name": "TMB金属一体式按钮",
+        "model": "TMB2-PD11-J024/G25",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-04",
+        "brand": "上海天逸",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101TD",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104385",
+        "material_name": "挡块",
+        "model": "X581-40-005-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-04-07",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101UD",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40010104386",
+        "material_name": "安装底板",
+        "model": "X581-40-002-A",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-02-01",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101VM",
+        "status_id": 10,
+        "group_id": "MG031",
+        "group_name": "机架类零件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "400310000000",
+        "material_name": "左手机架",
+        "model": "QBA553-591-01-000-E",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-02-20",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101WA",
+        "status_id": 10,
+        "group_id": "MG028",
+        "group_name": "自研模组",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0031",
+        "material_name": "对接输送线1",
+        "model": "QBA554-33-02-000-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-06-08",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101WJ",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0008",
+        "material_name": "垫条",
+        "model": "DFM009-21-00-005-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-01-11",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101WS",
+        "status_id": 10,
+        "group_id": "MG001",
+        "group_name": "PLC及模块",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0025",
+        "material_name": "数字量输出模块",
+        "model": "ICD-BOV16",
+        "unit": "件",
+        "quantity": "11",
+        "required_date": "2027-02-15",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101XF",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0028",
+        "material_name": "伺服驱动器",
+        "model": "ICM-D1CS11S",
+        "unit": "件",
+        "quantity": "28",
+        "required_date": "2026-11-07",
+        "brand": "英孚康(浙江)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101XI",
+        "status_id": 10,
+        "group_id": "MG014",
+        "group_name": "型材",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0014",
+        "material_name": "连接型材",
+        "model": "X581-40-008-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101XT",
+        "status_id": 10,
+        "group_id": "MG002",
+        "group_name": "板类",
+        "project": "TMS237-00002PB",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0004",
+        "material_name": "安装板1",
+        "model": "X476-08-004-A",
+        "unit": "件",
+        "quantity": "8",
+        "required_date": "2027-03-26",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101XU",
+        "status_id": 10,
+        "group_id": "MG018",
+        "group_name": "传动轮",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "12.04.07.0137",
+        "material_name": "惰轮",
+        "model": "EVD21-24-T10250-FC7",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-02-16",
+        "brand": "参考怡合达",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101XX",
+        "status_id": 10,
+        "group_id": "MG028",
+        "group_name": "自研模组",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0030",
+        "material_name": "对接输送线2",
+        "model": "QBA554-33-00-003-A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-03-29",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101YB",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "TMS262-1950IPD",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.05.03.0047",
+        "material_name": "伺服驱动器",
+        "model": "SV630NSIR61",
+        "unit": "件",
+        "quantity": "10",
+        "required_date": "2026-12-25",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101YI",
+        "status_id": 10,
+        "group_id": "MG012",
+        "group_name": "塑胶件",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "SIM-MAT0035",
+        "material_name": "整形板",
+        "model": "X524-50-013-A",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-01-23",
+        "brand": null,
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101YL",
+        "status_id": 10,
+        "group_id": "MG007",
+        "group_name": "电机控制类",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.05.03.0049",
+        "material_name": "伺服驱动器",
+        "model": "SV630NS5R5I",
+        "unit": "件",
+        "quantity": "4",
+        "required_date": "2027-04-02",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101YQ",
+        "status_id": 10,
+        "group_id": "MG032",
+        "group_name": "电池",
+        "project": "RAM001-00203YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "40403000017",
+        "material_name": "电池",
+        "model": "S6-C4A",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-03-01",
+        "brand": "汇川",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101YZ",
+        "status_id": 10,
+        "group_id": "MG003",
+        "group_name": "钣金件",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "SIM-MAT0011",
+        "material_name": "安装钣金2",
+        "model": "X581-40-007-A",
+        "unit": "件",
+        "quantity": "2",
+        "required_date": "2027-06-14",
+        "brand": "N/A",
+        "historical_supplier": "无锡勤顺机械科技有限公司"
+      },
+      {
+        "id": "20261101ZA",
+        "status_id": 10,
+        "group_id": "MG005",
+        "group_name": "导轨/滑轨",
+        "project": "DFM009-00206YS",
+        "approved_at": "2026-10-30T16:44:00",
+        "material_code": "12.03.0922",
+        "material_name": "直线导轨",
+        "model": "GHW25CC2T640ZAC1+D",
+        "unit": "件",
+        "quantity": "3",
+        "required_date": "2027-05-13",
+        "brand": "鼎翰",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101ZB",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "13.03.12.0042",
+        "material_name": "负荷开关底座",
+        "model": "V2C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-05-06",
+        "brand": "施耐德(Schneider)",
+        "historical_supplier": null
+      },
+      {
+        "id": "20261101ZN",
+        "status_id": 10,
+        "group_id": "MG009",
+        "group_name": "急停/按钮类/保护罩",
+        "project": "QBA553-00111PD",
+        "approved_at": "2026-10-30T13:44:00",
+        "material_code": "13.03.12.0043",
+        "material_name": "负荷开关手柄",
+        "model": "KCF1P2C",
+        "unit": "件",
+        "quantity": "1",
+        "required_date": "2027-04-07",
+        "brand": "施耐德(Schneider)",
+        "historical_supplier": null
+      }
+    ],
+    "quotations": [],
+    "orders": []
+  }
+}
